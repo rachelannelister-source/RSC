@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Richfield Surgery Center</title>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="images/richfieldlogothumbnail.png" alt="Richfield Surgery Center Logo">
+      </a>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Providers.html">Providers</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-phone">
+      <a href="tel:4352167291">Call: (435) 216-7291</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <h1>Contact Richfield Surgery Center</h1>
+    <p>We’re here to help you get the care you need. Reach out or request an appointment below.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="container">
+
+  <section class="content-card">
+
+    <div class="contact-top-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="contact-info-block">
+        <h2>Contact Information</h2>
+
+        <p>
+          <strong>Phone:</strong> <a href="tel:4352167291">(435) 216-7291</a><br>
+          <strong>Text:</strong> 435.879.7612<br>
+          <strong>Fax:</strong> 435.319.6127
+        </p>
+
+        <p>
+          <strong>Hours:</strong><br>
+          Monday-Friday<br>
+          By Appointment Only
+        </p>
+
+        <p>
+          <strong>Address:</strong><br>
+          860 N Main Ste. A<br>
+          Richfield, UT 84701
+        </p>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="contact-form-block">
+
+        <h2>Request an Appointment</h2>
+
+        <p class="form-intro">
+          We’ll follow up quickly to help schedule your appointment and answer any questions.
+        </p>
+
+        <form class="contact-form">
+
+          <label>Describe why you are requesting an appointment?*</label>
+          <textarea required></textarea>
+
+          <label>Which specialty/location would you like to see?*</label>
+          <select required>
+            <option value="">Please Select</option>
+            <option>Richfield Surgery Center</option>
+            <option>St. George</option>
+            <option>Cedar City</option>
+          </select>
+
+          <label>Do you have Insurance?*</label>
+          <select required>
+            <option value="">Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <label>Patient Name*</label>
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+
+          <label>Patient DOB*</label>
+          <input type="date" required>
+
+          <label>What is the best phone number to reach you at?*</label>
+          <input type="tel" placeholder="(000) 000-0000" required>
+
+          <label>What is your email address?*</label>
+          <input type="email" required>
+
+          <button type="submit">Request Appointment</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- MAP SECTION -->
+<section class="map-section">
+  <div class="map-section-inner">
+
+    <div class="map-card">
+      <h2>Find Us</h2>
+
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.286438092871!2d-112.08425140000001!3d38.7800674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874b138aaff2cf05%3A0xd90275bfd7381756!2sRichfield%20Surgery%20Center!5e0!3m2!1sen!2sus!4v1773506012958!5m2!1sen!2sus" 
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FLOATING CALL BUTTON -->
+<a href="tel:4352167291" class="floating-call">📞</a>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

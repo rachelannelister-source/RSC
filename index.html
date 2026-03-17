@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richfield Surgery Center - Surgical Services for Central Eastern Utah</title>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/richfieldlogothumbnail.png" alt="Richfield Surgery Center Logo">
+        </a>
+      </div>
+
+      <!-- HAMBURGER -->
+      <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+
+      <!-- MENU -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Providers.html">Providers</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <!-- PHONE -->
+      <div class="nav-phone">
+        <a href="tel:4352167291">Call: (435) 216-7291</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-flex">
+
+        <div class="hero-text">
+          <h1>Richfield Surgery Center</h1>
+          <p>
+            Surgical services for Central Eastern Utah in a modern, accredited outpatient facility close to home.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="tel:4352167291" class="btn">Call Now</a>
+            <a href="Services.html" class="btn btn-secondary">View Services</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/RichfieldSurgeryCenter.jpeg" alt="Richfield Surgery Center building">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="container">
+      <div class="content-card fade-in">
+        <h2>Convenient, High-Quality Surgical Care</h2>
+        <p>
+          Richfield Surgery Center offers a state-of-the-art environment for many of Vista Healthcare's surgical needs. Located adjacent to the Southwest Spine and Pain Center Richfield clinic, the center provides residents in Sevier County and surrounding areas with access to a world-class surgical facility and treatment options often only found in larger communities.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="container">
+      <div class="content-card fade-in">
+        <h2>Why Patients Choose Richfield Surgery Center</h2>
+        <ul class="feature-list">
+          <li>Licensed by the State of Utah</li>
+          <li>Fully accredited by Medicare (CMS)</li>
+          <li>ACLS/PALS certified nursing staff</li>
+          <li>Two fully equipped operating rooms</li>
+          <li>Fully accredited by AAAHC</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container">
+      <div class="content-card contact-flex fade-in">
+
+        <div class="contact-info">
+          <h3>Contact</h3>
+          <p>
+            <strong>Call:</strong> <a href="tel:4352167291">(435) 216-7291</a><br>
+            <strong>Text:</strong> <a href="sms:4358797612">435.879.7612</a><br>
+            <strong>Fax:</strong> 435.319.6127
+          </p>
+
+          <p>
+            <strong>Address:</strong><br>
+            555 N Main St<br>
+            Richfield, UT
+          </p>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps?q=Richfield+Surgery+Center+Utah&output=embed"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:4352167291" class="floating-call">📞</a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // HAMBURGER MENU
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    }
+
+    // FADE-IN ANIMATION
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  </script>
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+<script src="script.js"></script>
+</body>
+</html>
