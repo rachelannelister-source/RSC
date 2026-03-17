@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Richfield Surgery Center</title>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/richfieldlogothumbnail.png" alt="Richfield Surgery Center Logo">
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Providers.html">Providers</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-phone">
+        <a href="tel:4352167291">Call: (435) 216-7291</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Services</h1>
+      <p>
+        Richfield Surgery Center offers a range of advanced procedures in a modern outpatient setting close to home.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <section class="container">
+      <div class="content-card fade-in">
+        <h2>Procedures Offered</h2>
+
+        <p>
+          Our team provides a variety of interventional pain management and minimally invasive procedures designed to support patients throughout Central Eastern Utah.
+        </p>
+
+        <ul class="feature-list">
+          <li>Epidural Steroid Injections</li>
+          <li>Selective Nerve Root Blocks</li>
+          <li>Facet Joint Injections</li>
+          <li>Medial Branch Blocks</li>
+          <li>Sacroiliac Joint Injections</li>
+          <li>Neurostimulator</li>
+          <li>Minimally Invasive Surgery</li>
+          <li>Radiofrequency Rhizotomy</li>
+          <li>Spinal Cord Stimulation</li>
+          <li>Vertiflex Superion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="content-card fade-in">
+        <img src="images/Cole Robinson at Vista Healthcare Richfield Surgery Center Operating Room.png.jpg" alt="Dr. Cole Robinson in the operating room at Richfield Surgery Center">
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="content-card fade-in">
+        <h2>Questions About a Procedure?</h2>
+        <p>
+          Call Richfield Surgery Center at <a href="tel:4352167291">(435) 216-7291</a> for more information.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:4352167291" class="floating-call">📞</a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    }
+
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  </script>
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+<script src="script.js"></script>
+</body>
+</html>
